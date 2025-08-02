@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Maths</title>
+    <!--
+      The Inter font is included for a clean, modern typeface.
+      Tailwind CSS is loaded from a CDN for easy use.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /*
+          The body uses the Inter font and a very light gray background.
+          Smooth scrolling is enabled for a better user experience.
+        */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f7; /* Apple's light gray */
+            scroll-behavior: smooth;
+        }
+
+        /* Custom CSS to hide scrollbars while still allowing scrolling */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+    <!--
+      Navigation bar with a transparent background that becomes solid on scroll.
+      It's centered and has responsive spacing.
+    -->
+    <header class="sticky top-0 z-50 bg-white bg-opacity-70 backdrop-blur-md transition-shadow duration-300">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo - a simple, modern design -->
+            <a href="#" class="font-bold text-2xl tracking-wide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C8.68629 2 6 4.68629 6 8C6 11.3137 12 22 12 22C12 22 18 11.3137 18 8C18 4.68629 15.3137 2 12 2Z" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex space-x-8 text-sm font-medium">
+                <li><a href="#" class="hover:text-blue-600 transition-colors duration-200">Topics</a></li>
+                <li><a href="#" class="hover:text-blue-600 transition-colors duration-200">Contact</a></li>
+                <li><a href="#" class="hover:text-blue-600 transition-colors duration-200">Pricing</a></li>
+            </ul>
+
+            <!-- Cart/Account Icons -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!--
+      Hero Section - full-width, with a large, bold headline and a call-to-action.
+      The content is centered to draw the user's focus.
+    -->
+    <main>
+        <section class="min-h-screen flex items-center justify-center p-4 text-center">
+            <div class="space-y-6 max-w-4xl">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight tracking-tight">Master Math Easily.</h1>
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-600">
+                    Explore comprehensive tutorials to improve your math skills.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#" class="inline-block bg-blue-600 text-white font-medium px-8 py-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300">Learn More</a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid Section - a responsive grid of product cards. -->
+        <section class="container mx-auto px-4 py-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Browse our services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white p-6 rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/ffffff/cccccc?text=Product+Image" alt="Product 1" class="w-full h-auto rounded-xl mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Product One</h3>
+                    <p class="text-gray-600">A three-month course designed to cultivate a deeper appreciation for mathematics.</p>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="bg-white p-6 rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/ffffff/cccccc?text=Product+Image" alt="Product 2" class="w-full h-auto rounded-xl mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Product Two</h3>
+                    <p class="text-gray-600">Personalized sessions to help you master challenging concepts from your school curriculum.</p>
+                </div>
+                <!-- Product Card 3 -->
+                <!--<div class="bg-white p-6 rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/ffffff/cccccc?text=Product+Image" alt="Product 3" class="w-full h-auto rounded-xl mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Product Three</h3>
+                    <p class="text-gray-600">A brief, elegant description of the product and its features.</p>
+                </div>-->
+            </div>
+        </section>
+    </main>
+
+    <!--
+      Footer section with simple, centered text and responsive padding.
+    -->
+    <footer class="bg-gray-100 py-8 mt-16 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-sm text-gray-500">&copy; 2025 All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
